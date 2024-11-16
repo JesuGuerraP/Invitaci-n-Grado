@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invitación a la graduación de Jesús Guerra - Ingeniero de Software">
+    <title>Invitación a Graduación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div id="loading" class="loading-screen">
+        <div class="loader"></div>
+        <p>Cargando invitación...</p>
+    </div>
+
+    <!-- Formulario de selección de invitado -->
+    <div id="guest-selector" class="guest-selector">
+        <div class="selector-content">
+            <h2>Bienvenido a mi Graduación</h2>
+            <p>Por favor, selecciona tu nombre de la lista:</p>
+            <form id="guest-form" class="guest-form">
+                <select id="guest-list" required>
+                    <option value="">Selecciona tu nombre</option>
+                </select>
+                <input type="tel" id="guest-phone" 
+                    placeholder="Tu número de teléfono (opcional)"
+                    pattern="[0-9]{10}"
+                    title="Por favor ingresa un número de teléfono válido de 10 dígitos">
+                <button type="submit" class="btn btn-primary">Continuar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="content" class="hidden">
+        <header class="header">
+            <h1>¡Bienvenido/a, <span id="guest-name"></span>!</h1>
+            <p class="subtitle">Jesús Guerra te invita a celebrar su graduación en Ingeniería de Software.</p>
+        </header>
+
+        <section id="event-details" class="section">
+            <h2>Detalles del Evento</h2>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <span class="icon">📅</span>
+                    <strong>Fecha:</strong> 30 de noviembre, 2024
+                </div>
+                <div class="detail-item">
+                    <span class="icon">⏰</span>
+                    <strong>Hora:</strong> 8:00 PM
+                </div>
+                <div class="detail-item">
+                    <span class="icon">📍</span>
+                    <strong>Lugar:</strong> [Mi residencia - Barrio Nueva Colombia ]
+                </div>
+            </div>
+        </section>
+
+        <!-- Agregar esta sección después de event-details y antes del countdown -->
+<section id="gift-reminder" class="section">
+    <div class="gift-container">
+        <h2>
+            <span class="icon">🎁</span>
+            Un pequeño recordatorio
+        </h2>
+        <div class="gift-content">
+            <p>Tu presencia es el mejor regalo, pero si deseas darme algo más 😁🎁...</p>
+            <div class="gift-options">
+                <div class="gift-option">
+                    <span class="icon">💝</span>
+                    <p>Un detalle especial</p>
+                </div>
+                <div class="gift-option">
+                    <span class="icon">💰</span>
+                    <p>Un sobre con lluvia de sobres</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="countdown" class="section">
+            <h2>Faltan para el evento:</h2>
+            <div class="countdown-grid">
+                <div class="countdown-item">
+                    <span id="days">0</span>
+                    <span class="label">días</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">0</span>
+                    <span class="label">horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">0</span>
+                    <span class="label">minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">0</span>
+                    <span class="label">segundos</span>
+                </div>
+            </div>
+        </section>
+
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+        <section id="profile" class="section">
+            <h2>Foto del graduado:</h2>
+            <div class="profile-image">
+                <img src="tu_imagen.jpg" alt="Foto de Jesús Guerra" loading="lazy">
+            </div>
+        </section>
+
+        <section id="attendance" class="section">
+            <h2>¿Confirmas tu asistencia?</h2>
+            <div class="button-group">
+                <button onclick="confirmAttendance(true)" class="btn btn-primary">
+                    <span class="icon">✓</span> Sí, asistiré
+                </button>
+                <button onclick="confirmAttendance(false)" class="btn btn-secondary">
+                    <span class="icon">×</span> No podré asistir
+                </button>
+            </div>
+            <div id="confirmation-message" class="message"></div>
+        </section>
+
+        <section id="message" class="section">
+            <h2>Deja un mensaje para el graduado:</h2>
+            <div class="message-form">
+                <textarea 
+                    id="guest-message" 
+                    placeholder="Escribe tu mensaje..."
+                    maxlength="500"
+                ></textarea>
+                <div class="char-counter">
+                    <span id="char-count">0</span>/500 caracteres
+                </div>
+                <button onclick="saveMessage()" class="btn btn-primary">
+                    <span class="icon">📨</span> Enviar Mensaje
+                </button>
+                <div id="message-sent" class="hidden success-message">
+                    ¡Gracias por tu mensaje!
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="Email.js"></script>
+</body>
+</html>
