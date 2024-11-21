@@ -1,7 +1,7 @@
 // Configuración
 const CONFIG = {
     LOAD_DELAY: 2000,
-    GRADUATION_DATE: "2024-11-28T09:00:00",
+    GRADUATION_DATE: "2024-11-30T09:00:00",
     GOOGLE_SCRIPT_URL: "https://script.google.com/a/macros/unicartagena.edu.co/s/AKfycbxURRS52AtB1_d44n4pN1UHcCqlstxae7TghoJvAx_GWzNKVgDzfdgFapNtdxqf0WNY/exec",
     MAX_MESSAGE_LENGTH: 500,
     MAX_MESSAGES_PER_GUEST: 3,
@@ -23,7 +23,7 @@ const CONFIG = {
         { id: 14, name: "José Berdecia", phone: "" },
         { id: 15, name: "Suegros", phone: "" },
         { id: 16, name: "Luis Guerra", phone: "" },
-        { id: 17, name: "Aurysa Castro", phone: "" },
+        { id: 17, name: "Carlos Cudris", phone: "" },
         { id: 18, name: "Anuar Guerra", phone: "" },
         { id: 19, name: "Gabriel Amaris", phone: "" },
         { id: 20, name: "Henry Troncoso", phone: "" },
@@ -38,6 +38,8 @@ const CONFIG = {
         { id: 29, name: "Marian Montes", phone: "" },
         { id: 30, name: "Meraly Martinez", phone: "" },
         { id: 31, name: "Rosaura Muleth - Kevin", phone: "" },
+        { id: 32, name: "Mauro Lopez - Mairo Lopez", phone: "" },
+        { id: 33, name: "Jesús Piñeres", phone: "" },
         // Añade aquí todos tus invitados
     ]
 };
