@@ -40,6 +40,8 @@ const CONFIG = {
         { id: 31, name: "Rosaura Muleth - Kevin", phone: "" },
         { id: 32, name: "Mauro Lopez - Mairo Lopez", phone: "" },
         { id: 33, name: "Jesús Piñeres", phone: "" },
+        { id: 34, name: "Osnaide Rojas", phone: "" },
+        { id: 35, name: "Juan David Rojas", phone: "" },
         // Añade aquí todos tus invitados
     ]
 };
